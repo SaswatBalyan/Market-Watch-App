@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Market Watch Dashboard - Stage 1
 
 A professional financial analysis and visualization platform built with Python. This dashboard provides interactive tools for analyzing stock market data, comparing multiple assets, and generating investment insights.
@@ -393,3 +394,7 @@ Built as an educational project demonstrating:
 
 **Last Updated**: February 2026
 **Version**: 1.0 (Stage 1 Complete)
+=======
+# Market-Watch-App
+Making a market watch app - Looking at value of 90+ US stocks, see the trends of different market metrics. Starting from a csv file and delivering final product with a robust api
+>>>>>>> d5909ba1208e8da84533a50a595108e7ca62152a
