@@ -44,11 +44,11 @@ echo "Dependencies installed successfully"
 echo ""
 
 # Verify installation
-echo " Verifying installation..."
-if $PYTHON_CMD -c "import pandas, plotly, streamlit; print('✅ All required packages loaded')" 2>/dev/null; then
+echo "Verifying installation..."
+if $PYTHON_CMD -c "import pandas, plotly, streamlit; print('All required packages loaded')" 2>/dev/null; then
     echo ""
 else
-    echo " Some packages failed to load"
+    echo "Some packages failed to load"
     exit 1
 fi
 

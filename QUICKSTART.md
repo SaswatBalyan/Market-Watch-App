@@ -1,6 +1,6 @@
 # Quick Start Guide - Market Watch Dashboard
 
-## 🚀 Get Started in 3 Minutes
+## Get Started in 3 Minutes
 
 ### Step 1: Install Dependencies
 ```bash
@@ -30,7 +30,7 @@ The app will open at `http://localhost:8501` in your browser.
 
 ---
 
-## 📊 Using the Dashboard
+## Using the Dashboard
 
 ### Single Stock Analysis
 
@@ -58,7 +58,7 @@ The app will open at `http://localhost:8501` in your browser.
 
 ---
 
-## 💡 Key Metrics Explained
+## Key Metrics Explained
 
 | Metric | Formula | Interpretation |
 |--------|---------|-----------------|
@@ -71,7 +71,7 @@ The app will open at `http://localhost:8501` in your browser.
 
 ---
 
-## 🎯 Example Analyses
+## Example Analyses
 
 ### Find Hidden Gems (Low Risk, High Return)
 1. Select "Multiple Stocks" comparison
@@ -97,7 +97,7 @@ The app will open at `http://localhost:8501` in your browser.
 
 ---
 
-## 🔧 Customization
+## Customization
 
 ### Add More Stocks
 Ensure CSV file follows the pattern: `{TICKER}_stock_market_data.csv` in the `archive/` folder
@@ -117,7 +117,7 @@ aapl_recent = aapl['2020-01-01':'2023-12-31']  # Time-series slicing
 
 ---
 
-## 📱 Keyboard Shortcuts in Dashboard
+## Keyboard Shortcuts in Dashboard
 
 | Action | Keys |
 |--------|------|
@@ -129,7 +129,7 @@ aapl_recent = aapl['2020-01-01':'2023-12-31']  # Time-series slicing
 
 ---
 
-## ⚡ Pro Tips
+## Pro Tips
 
 1. **Weekly Analysis**: Set date range to recent 52 weeks to see current trends
 2. **Sector Comparison**: Load related tickers (e.g., all tech stocks) to compare sectors
@@ -138,7 +138,7 @@ aapl_recent = aapl['2020-01-01':'2023-12-31']  # Time-series slicing
 
 ---
 
-## 🆘 Common Issues & Solutions
+## Common Issues & Solutions
 
 | Issue | Solution |
 |-------|----------|
@@ -149,7 +149,7 @@ aapl_recent = aapl['2020-01-01':'2023-12-31']  # Time-series slicing
 
 ---
 
-## 📞 Support
+## Support
 
 Check `README.md` for detailed documentation and code examples.
 
@@ -160,4 +160,4 @@ python -c "from data_handler import StockDataHandler; h = StockDataHandler(); pr
 
 ---
 
-**Happy analyzing!** 📈
+**Happy analyzing!**

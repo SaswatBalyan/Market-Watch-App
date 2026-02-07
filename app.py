@@ -12,7 +12,7 @@ from glossary import display_term_with_help, add_glossary_section, GLOSSARY
 
 st.set_page_config(
     page_title="Market Watch Dashboard",
-    page_icon="📈",
+    page_icon="�",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -38,13 +38,13 @@ st.markdown("""
 def initialize_data_handler():
     return StockDataHandler(archive_dir="archive")
 
-st.sidebar.markdown("# ⚙️ Market Watch Configuration")
+st.sidebar.markdown("# Market Watch Configuration")
 st.sidebar.markdown("---")
 
 handler = initialize_data_handler()
 
 selected_ticker = st.sidebar.selectbox(
-    "📊 Select Stock Ticker",
+    "Select Stock Ticker",
     options=handler.available_tickers,
     index=0 if handler.available_tickers else None,
     help="Select a stock ticker to analyze"
@@ -52,7 +52,7 @@ selected_ticker = st.sidebar.selectbox(
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("### 📅 Date Range")
+st.sidebar.markdown("### Date Range")
 
 try:
     ticker_data = handler.load_stock_data(selected_ticker)
@@ -96,7 +96,7 @@ else:
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("### 📈 Technical Indicators")
+st.sidebar.markdown("### Technical Indicators")
 
 show_ma20 = st.sidebar.checkbox(
     "20-Day MA", 
@@ -124,7 +124,7 @@ if show_ma200:
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("### 🔄 Comparative Analysis")
+st.sidebar.markdown("### Comparative Analysis")
 
 comparison_mode = st.sidebar.radio(
     "Analysis Type",
@@ -151,18 +151,18 @@ else:
     compare_tickers = [selected_ticker]
 
 
-st.markdown('<p class="main-header">📈 Market Watch Dashboard</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-header">Market Watch Dashboard</p>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.metric("📊 Tickers Available", len(handler.available_tickers))
+    st.metric("Tickers Available", len(handler.available_tickers))
 with col2:
-    st.metric("📅 Data Span", "1980 - 2026")
+    st.metric("Data Span", "1980 - 2026")
 
 
 st.markdown("---")
 
-st.markdown("## 📊 Single Stock Analysis")
+st.markdown("## Single Stock Analysis")
 
 try:
     with st.spinner(f"Loading data for {selected_ticker}..."):
@@ -212,13 +212,13 @@ try:
     
     col_title, col_help = st.columns([0.85, 0.15])
     with col_title:
-        st.subheader(f"🕯️ {selected_ticker} - Candlestick Chart")
+        st.subheader(f"{selected_ticker} - Candlestick Chart")
     with col_help:
         st.markdown(f"[?](https://www.investopedia.com/terms/c/candlestick.asp)", 
                    help=GLOSSARY.get('candlestick', {}).get('brief', ''))
     
     st.info(
-        "📍 **What you're looking at**: Each candle shows Open, High, Low, Close prices. "
+        "**What you're looking at**: Each candle shows Open, High, Low, Close prices. "
         "Green = price up, Red = price down. Colored lines are moving averages showing trends.",
         icon="ℹ️"
     )
@@ -233,13 +233,13 @@ try:
     
     col_title, col_help = st.columns([0.75, 0.25])
     with col_title:
-        st.subheader(f"💹 {selected_ticker} - Price vs Cumulative Returns")
+        st.subheader(f"{selected_ticker} - Price vs Cumulative Returns")
     with col_help:
-        st.markdown(f"[?](https://www.investopedia.com/terms/c/cumulative-return.asp)", 
+        st.markdown(f"[?](https://www.investopedia.com/terms/c/.cumulative-return.asp)", 
                    help=GLOSSARY.get('cumulative_return', {}).get('brief', ''))
     
     st.info(
-        "📍 **Left axis**: Stock price. **Right axis**: Total return from day 1. "
+        "**Left axis**: Stock price. **Right axis**: Total return from day 1. "
         "Shows how your $100 investment would grow over time.",
         icon="ℹ️"
     )
@@ -256,7 +256,7 @@ try:
     with col1:
         col_title, col_help = st.columns([0.8, 0.2])
         with col_title:
-            st.subheader(f"📉 {selected_ticker} - Daily Returns Distribution")
+            st.subheader(f"{selected_ticker} - Daily Returns Distribution")
         with col_help:
             st.markdown(f"[?](https://www.investopedia.com/terms/d/daily-return.asp)", 
                        help=GLOSSARY.get('daily_return', {}).get('brief', ''))
@@ -267,7 +267,7 @@ try:
     with col2:
         col_title, col_help = st.columns([0.8, 0.2])
         with col_title:
-            st.subheader(f"🌊 {selected_ticker} - Rolling Volatility")
+            st.subheader(f"{selected_ticker} - Rolling Volatility")
         with col_help:
             st.markdown(f"[?](https://www.investopedia.com/terms/v/volatility.asp)", 
                        help=GLOSSARY.get('volatility', {}).get('brief', ''))
@@ -286,7 +286,7 @@ except Exception as e:
 
 st.markdown("---")
 
-st.markdown("## 🔄 Comparative Analysis")
+st.markdown("## Comparative Analysis")
 
 if len(compare_tickers) >= 2:
     try:
@@ -302,7 +302,7 @@ if len(compare_tickers) >= 2:
         # Correlation Matrix
         col_title, col_help = st.columns([0.85, 0.15])
         with col_title:
-            st.subheader("🔗 Correlation Matrix")
+            st.subheader("Correlation Matrix")
         with col_help:
             st.markdown(f"[?](https://www.investopedia.com/terms/c/correlation.asp)", 
                        help=GLOSSARY.get('correlation', {}).get('brief', ''))
@@ -313,7 +313,7 @@ if len(compare_tickers) >= 2:
         - **Blue (close to -1)**: Stocks move opposite directions → good for diversification
         - **White (close to 0)**: No relationship
         
-        **💡 Tip**: For a safe portfolio, mix stocks with low/negative correlation.
+        **Tip**: For a safe portfolio, mix stocks with low/negative correlation.
         """)
         
         corr_matrix = ComparativeAnalysis.compute_correlation_matrix(multi_stock_data)
@@ -328,7 +328,7 @@ if len(compare_tickers) >= 2:
         # Risk vs Return Scatter Plot
         col_title, col_help = st.columns([0.85, 0.15])
         with col_title:
-            st.subheader("⚖️ Risk vs Return Analysis")
+            st.subheader("Risk vs Return Analysis")
         with col_help:
             st.markdown(f"[?](https://www.investopedia.com/terms/r/risk-adjusted-return.asp)", 
                        help=GLOSSARY.get('risk_adjusted_return', {}).get('brief', ''))
@@ -339,7 +339,7 @@ if len(compare_tickers) >= 2:
         - **Y-Axis**: Annual Return (profit percentage per year)
         - **Color**: Sharpe Ratio (brighter = better returns for the risk taken)
         
-        **🎯 What you want**: Top-left = High return with low risk (rare gems!)
+        **What you want**: Top-left = High return with low risk (rare gems!)
         """)
         
         risk_return_df = ComparativeAnalysis.create_risk_return_profile(multi_stock_data)
@@ -349,7 +349,7 @@ if len(compare_tickers) >= 2:
         )
         st.plotly_chart(risk_return_fig, use_container_width=True)
 
-        st.subheader("📋 Risk-Return Profile")
+        st.subheader("Risk-Return Profile")
         
         display_df = risk_return_df[[
             'Ticker', 'Risk', 'Annual_Return', 'Sharpe'
@@ -365,7 +365,7 @@ if len(compare_tickers) >= 2:
         
         st.markdown("---")
         
-        st.subheader("📈 Cumulative Returns Comparison")
+        st.subheader("Cumulative Returns Comparison")
         st.markdown("Normalized comparison starting from 0% - shows relative performance of all stocks.")
         
         multi_returns_fig = ComparativeCharts.create_multi_stock_returns_chart(

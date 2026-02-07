@@ -177,16 +177,16 @@ def create_info_box_with_terms(content: str, terms_dict: dict = None) -> str:
 
 
 def add_glossary_section():
-    with st.expander("📚 Financial Glossary - Learn Terms"):
+    with st.expander("Financial Glossary - Learn Terms"):
         st.markdown("### Common Financial Terms")
         
         categories = {
-            "📈 Stock Basics": ["ticker", "open", "close", "high", "low", "volume"],
-            "💹 Returns": ["annual_return", "cumulative_return", "daily_return"],
-            "⚠️ Risk Metrics": ["volatility", "sharpe_ratio", "risk", "standard_deviation"],
-            "🔍 Technical Analysis": ["moving_average", "ma20", "ma50", "ma200", "candlestick", "technical_indicator"],
-            "🔄 Comparative Analysis": ["correlation", "portfolio_diversification", "risk_adjusted_return"],
-            "📊 Market Terms": ["bullish", "bearish", "trend"]
+            "Stock Basics": ["ticker", "open", "close", "high", "low", "volume"],
+            "Returns": ["annual_return", "cumulative_return", "daily_return"],
+            "Risk Metrics": ["volatility", "sharpe_ratio", "risk", "standard_deviation"],
+            "Technical Analysis": ["moving_average", "ma20", "ma50", "ma200", "candlestick", "technical_indicator"],
+            "Comparative Analysis": ["correlation", "portfolio_diversification", "risk_adjusted_return"],
+            "Market Terms": ["bullish", "bearish", "trend"]
         }
         
         for category, terms in categories.items():
