@@ -68,6 +68,9 @@ This is **Stage 1** of the Market Watch Dashboard project, implementing the comp
 ```bash
 cd /home/saswat-balyan/devStuff/90sStock
 ```
+```bash
+git clone https://github.com/SaswatBalyan/Market-Watch-App.git
+```
 
 2. **Install dependencies:**
 ```bash
@@ -81,16 +84,7 @@ python data_handler.py
 
 You should see output like:
 ```
-============================================================
-Market Watch Dashboard - Data Handler Test
-============================================================
-
-✓ Discovered 90 tickers
-
---- Loading AAPL ---
-Shape: (11368, 8)
-Date range: 1980-12-12 00:00:00 to 2024-01-01 00:00:00
-...
+Working properly
 ```
 
 ### Running the Dashboard
