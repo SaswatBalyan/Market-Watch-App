@@ -2,7 +2,7 @@
 
 A professional financial analysis and visualization platform built with Python. This dashboard provides interactive tools for analyzing stock market data, comparing multiple assets, and generating investment insights.
 
-## 🎯 Project Overview
+##  Project Overview
 
 This is **Stage 1** of the Market Watch Dashboard project, implementing the complete data pipeline for financial analysis:
 
@@ -39,7 +39,7 @@ This is **Stage 1** of the Market Watch Dashboard project, implementing the comp
   - Technical indicator configuration
   - Multi-stock comparison
 
-## 📊 Project Structure
+##  Project Structure
 
 ```
 90sStock/
@@ -55,7 +55,7 @@ This is **Stage 1** of the Market Watch Dashboard project, implementing the comp
 └── README.md                     # This file
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -102,7 +102,7 @@ streamlit run app.py
 
 The dashboard will open at `http://localhost:8501`
 
-## 📈 Key Features
+##  Key Features
 
 ### Single Stock Analysis
 
@@ -148,7 +148,7 @@ The dashboard will open at `http://localhost:8501`
    - Compare relative performance across stocks
    - Identify outperforming/underperforming assets
 
-## 💻 Code Modules
+##  Code Modules
 
 ### `data_handler.py`
 
@@ -195,7 +195,7 @@ Main Streamlit application with:
 - Comparative analysis section
 - Responsive layout and error handling
 
-## 📚 Usage Examples
+##  Usage Examples
 
 ### Example 1: Load and Analyze a Single Stock
 
@@ -263,7 +263,7 @@ fig = FinancialCharts.create_candlestick_with_volume(
 fig.show()
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Sidebar Options
 
@@ -273,7 +273,7 @@ fig.show()
 4. **Analysis Mode**: Single stock vs Multiple stocks comparison
 5. **Comparison Stocks**: Select which stocks to include in comparative analysis
 
-## 📊 Data Format
+##  Data Format
 
 Input CSV files contain the following columns:
 - `Date`: Trading date
@@ -291,7 +291,7 @@ Input CSV files contain the following columns:
 - `MA20`, `MA50`, `MA200`: Moving averages
 - `Ticker`: Stock symbol (added for multi-stock analysis)
 
-## 🎓 Financial Concepts Explained
+##  Financial Concepts Explained
 
 ### Daily Returns
 Formula: (Price_today - Price_yesterday) / Price_yesterday
@@ -325,7 +325,7 @@ Measure of how two stocks move together:
 - **0.0**: No relationship
 - **-1.0**: Perfect negative correlation (move opposite)
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 ### "FileNotFoundError: Data not found for ticker X"
 
@@ -353,7 +353,7 @@ streamlit run app.py
 streamlit run app.py --logger.level=debug
 ```
 
-## 📈 Performance Metrics
+##  Performance Metrics
 
 Dataset coverage:
 - **90+ stocks** from various sectors
@@ -361,27 +361,19 @@ Dataset coverage:
 - **Average rows per stock**: ~11,000 trading days
 - **Total data points**: ~1,000,000+ OHLCV records
 
-## 🔮 Future Enhancements (Stage 2+)
 
-- **Machine Learning Integration**: Predictive models for stock prices
-- **Portfolio Optimization**: Markowitz efficient frontier analysis
-- **Real-time Data**: Live market data integration
-- **Advanced Indicators**: RSI, MACD, Bollinger Bands
-- **Backtesting Engine**: Test trading strategies
-- **Report Generation**: Export analysis as PDF
-
-## 📝 Notes
+##  Notes
 
 - All data is historical and sourced from CSV files
 - Prices are adjusted for stock splits
 - No dividends adjustment applied in this version
 - Time series analysis assumes trading days (weekends/holidays excluded)
 
-## 📄 License
+##  License
 
 This project is provided as-is for educational and personal use.
 
-## 👨‍💼 Author
+##  Author
 
 Built as an educational project demonstrating:
 - Financial data engineering
@@ -392,5 +384,5 @@ Built as an educational project demonstrating:
 ---
 
 **Last Updated**: February 2026
-**Version**: 1.0 (Stage 1 Complete)
+**Version**: 2.0 
 
